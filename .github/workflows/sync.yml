@@ -30,7 +30,7 @@ on:
           - merge   # 尝试合并：如果有冲突会报错
 
 env:
-  UPSTREAM_REPO: "cluntop/tvbox"
+  UPSTREAM_REPO: "blogshare/tvbox"
   UPSTREAM_BRANCH: ${{ github.event.inputs.upstream_branch || 'main' }}
   TARGET_BRANCH: ${{ github.event.inputs.target_branch || 'main' }}
   SYNC_STRATEGY: ${{ github.event.inputs.sync_strategy || 'discard' }}
@@ -46,7 +46,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           ref: ${{ env.TARGET_BRANCH }}
-          repository: cluntop/tvbox
+          repository: blogshare/tvbox
           token: ${{ secrets.GIT_TOKEN }}
           persist-credentials: true
           fetch-depth: 1
