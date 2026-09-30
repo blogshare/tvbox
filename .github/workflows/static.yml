@@ -42,7 +42,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          repository: cluntop/tvbox
+          repository: blogshare/tvbox
           token: ${{ secrets.GIT_TOKEN }}
           fetch-depth: 1
           lfs: true
