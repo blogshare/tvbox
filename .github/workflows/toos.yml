@@ -73,11 +73,12 @@ jobs:
         # fi
         
         git commit -a -m "Update m3u"
+        git push origin main
         
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+    # - name: Push changes
+     # uses: ad-m/github-push-action@v0.6.0
+    #  with:
+     #   github_token: ${{ secrets.GITHUB_TOKEN }}
+      #  branch: ${{ github.ref }}
         # pull: rebase   # pull --rebase before push; also accepts: merge | ff-only | true
 
